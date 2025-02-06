@@ -1,0 +1,34 @@
+[project]
+version = "0.1.0"
+description = ""
+authors = [
+    {name = "Dj Isaac", email = "contact@dejaydev.com"}
+]
+license = "MIT"
+readme = "README.md"
+name = "juno"
+requires-python = "~=3.12"
+
+
+[tool.poetry]
+package-mode = false
+
+
+[tool.poetry.dependencies]
+python = "~=3.12.8"
+vllm = "^0.7.2"
+mistral_common = "1.5.2"
+runpod = "1.7.7"
+flashinfer-python = { source = "flashinfer-indexes" }
+python-dotenv = "^1.0.1"
+
+
+[[tool.poetry.source]]
+name = "flashinfer-indexes"
+url = "https://flashinfer.ai/whl/cu124/torch2.5/"
+priority = "supplemental"
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
